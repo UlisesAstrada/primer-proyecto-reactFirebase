@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { useState } from 'react'
 
 function Temperatura() {
   
@@ -8,16 +8,16 @@ function Temperatura() {
   const Bajar = () => setTemperatura(temperatura - 1)
 
   return (
-    <Fragment>
+    <div className='container'>
       <h2>La temperatura es: {temperatura}</h2>
-      <p>
+      <div>
         {
-          temperatura > 21 ? 'Hace calor!' : 'Hace frío!'
+          temperatura > 21 ? <p className='alert alert-danger' role='alert'>Hace calor!</p> : <p className='alert alert-primary' role='alert'>Hace frío!</p>
         }
-      </p>
-      <button onClick={Subir}>Aumentar temperatura</button>
-      <button onClick={Bajar}>Reducir temperatura</button>
-    </Fragment>
+      </div>
+      <button className='btn btn-success btn-block me-3' onClick={Bajar}>Reducir temperatura</button>
+      <button className='btn btn-success btn-block' onClick={Subir}>Aumentar temperatura</button>
+    </div>
   )
 }
 

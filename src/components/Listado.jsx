@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 
 function Listado() {
   
-  const [numeros, SetNumeros] = useState([1,2,3,4,5,6])
+  const [numeros, setNumeros] = useState([1,2,3,4,5,6])
 
   return (
     <Fragment>
